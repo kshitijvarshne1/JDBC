@@ -6,9 +6,11 @@
  */
 
 package main;
+
 import helper.CityEntryHelper;
 import connection.DatabaseConnection;
 import data.City;
+
 import javax.swing.*;
 import java.sql.SQLException;
 import java.util.Scanner;

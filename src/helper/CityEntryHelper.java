@@ -5,6 +5,7 @@
  *   File: CityEntryHelper.java
  */
 package helper;
+
 import data.City;
 
 import javax.swing.*;
@@ -16,14 +17,14 @@ import java.sql.SQLException;
 
 public class CityEntryHelper {
     //inserted query
-    public static final String QUERY="Insert into cities values(?,?,?);";
+    public static final String QUERY = "Insert into cities values(?,?,?);";
 
     //Create
-    public boolean addCityToDatabase(Connection connection,City city) throws SQLException {
-        String name= city.getName();
-        boolean traversal=city.isTraversed();
-        int kilometres=city.getKilometres();
-        PreparedStatement insertStatement=(
+    public boolean addCityToDatabase(Connection connection, City city) throws SQLException {
+        String name = city.getName();
+        boolean traversal = city.isTraversed();
+        int kilometres = city.getKilometres();
+        PreparedStatement insertStatement = (
                 connection.prepareStatement(QUERY)
         );
         insertStatement.setString(1, name);
